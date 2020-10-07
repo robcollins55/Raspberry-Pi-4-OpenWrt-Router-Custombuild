@@ -47,9 +47,10 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
      1. SSH into the Pi and do at the command prompt *opkg update; opkg --autoremove remove luci-ssl-nginx; opkg install luci-ssl-nginx*.
      2. Do not reboot, just leave the Pi running and recheck web browser access to Luci, it should be working now.
 11.  Go to Luci>system>system>language&style and set the theme to OpenWrt2020 - it's much nicer than bootstrap :wink:
-12.  If using a lan switch, connect a cable ftom the gigabit port on the Pi to the first lan port of your switch/wifiAP device.  Remember to swith DHCP and NAT off on the switch (as the Pi does all that) and set the gateway to 192.168.1.1.
+12.  If using a lan switch, connect a cable ftom the gigabit port on the Pi to the first lan port of your switch/wifiAP device.  Remember to switch DHCP and NAT off on the switch (as the Pi does all that) and set the gateway to the Pi address - default is 192.168.1.1.
 13.  Turn the wifi on the Pi off if you intend to use your switch/wifiAP instead Network>wireless>Rivendell.  If you intend to keep the wifi on and use the Pi as the wifiAP, please do alter the country code under advanced settings to your country - by default it is set to NZ New Zealand.  Also rename the SSID and password to your preference.
 14.  Go to system>system>generalsettings>timezone and set your timezone to your location.
+15.  Method for setting up a NAS service via Samba with WireGuard remote access I will cover in Extras.md, coming soon!
 
 ## Windows 10 steps
 The general principles of *"[Linux Steps](https://github.com/robcollins55/Raspberry-Pi-4-OpenWRT-Router-Custombuild#linux-steps "Linux Steps")"* above also apply to working with Windows and all steps in that section can be followed except items 3 and 4 for writing the image to the micro SD.  Please download [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/ "Win32 Disk Imager") to do the image writing, and the free [Paragon Partition Manager](https://www.paragon-software.com/free/pm-express/# "Paragon Partition Manager") can be used to expand the rootfs partition to take up the whole micro SD card if that is wanted.
