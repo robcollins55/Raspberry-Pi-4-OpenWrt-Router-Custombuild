@@ -1,11 +1,12 @@
-#Why I made this Custom-build Raspberry Pi 4 OpenWRT Firmware
+# Why I made this Custom-build Raspberry Pi 4 OpenWRT Firmware
+
 For years I have been looking for a home router solution which is decent hardware at a price that won't make you cry.  The majority of available home routers out there have such minimal hardware specs that they really aren't up to any task much more than just supplying internet to the house.   Too bad if you want to get decent NAS capability out of the device - in my experience that's usually a pretty frustratingly slow affair with your typical home router.  Then I spotted an interesting project website by a guy named Vladimír Záhradník.  Vladimir describes his Raspberry Pi 4 router project using OpenWRT as the software basis and his project site for that is [HERE](https://www.zahradnik.io/raspberry-pi-as-a-home-router "HERE").  So I bought a Raspberry Pi 4 and followed Vlad's guidance; it worked really well and I've now got a very capable Pi 4 OpenWRT router running at my house which is vastly superior to most typical home routers.  The Raspberry Pi 4 makes a perfect rock solid fast home router as (unlike previous versions of he Pi) it has a gigabit ethernet port and two full speed USB3 ports integrated into this Broadcom BCM2711 device; with a very capable quad core Cortex-A72 ARM v8 driving the whole set up.  For 40 bucks US I bought the 2GB RAM model (here in New Zealand) which I've found is plenty for router purposes and is way more RAM than your typical off-the-shelf home router.
 
 **Problem.**  Following Vlad's guide is fairly straight-forward if you plan on doing it just the one time, setting and forgetting.  However, if you at some point later want to extend the capability of the router by installing or upgrading the occasional OpenWRT package you will likely run into software incompatibility trouble as the Pi 4 version of OpenWRT is still under active development so has not moved to "stable" yet and thus you need to start from scratch following Vlad's guide and using the latest snapshot build from OpenWRT.  While that is very doable, it is not very convenient and one might spend at least an hour or so rebuilding the router installation with the latest snapshot build.
 
 **Solution.**  Make a custom build from the latest snapshot!  Being the nice guy that I am I will be creating an updated custom build on a weekly basis using the official OpenWRT image builder system, which uses all the official OpenWRT software for the build.  I will aim to create a build each week and upload it here around the middle of each week.
 
-#Aims of this Customised Build
+# Aims of this Customised Build
 The *"List of Packages"* section at the end of this readme come preinstalled on my custom build and aim to do the following "out of the box":
 
 1. Render the new router as immediately accessible via wifi network SSID "*Rivendell*" and password *Hobbiton* to enable easy further setting up for individual use cases.
@@ -17,8 +18,8 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
     c. Bash instead of Ash for terminal access to the router (Ash does not keep a history of previous commands accessed through up-arrow key whereas Bash does do that)
     d. T
 
-#How-to
-##System Minimum Requirements
+# How-to
+## System Minimum Requirements
  *  Raspberry Pi 4 with min 2GB RAM
  *  Raspberry Pi 4 enclosure/case recommended
  *  USB C cable
@@ -29,7 +30,7 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
  *  A working laptop/desktop with wifi and SD slot (if no SD slot, use a USB sd card reader instead)
  *  micro SD to SD adapter card so that the micro can be inserted into the laptop/desktop/reader
 
-##Linux Steps
+## Linux Steps
 1. Download the latest custom build from this repository
 2. Insert the micro SD card into the card slot of the laptop or USB reader
 3. At Linux command prompt run lsblk which will show the device name of the SD.  In my case it is /dev/mmcblk0 but if yours is different make sure to change it to what you've got when doing step
@@ -44,10 +45,10 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
 9.  Fire up a web browser and in the address bar enter 192.168.1.1 and hit enter; you may have to accept security warnings of the browser to continue.  You should now have access to  the OpenWRT Luci web interface of your new Pi 4 router.  If you get a browser "cannot connect to host" or similar message follow step 10.  If you successfully accessed Luci you can skip that step.
 10.  Luci may need to be reinstalled to access it, which I have to do after every (rare) reboot of the Pi; do the following.  SSH into the Pi and do at the command prompt *opkg update; opkg --autoremove remove luci-ssl-nginx; opkg install luci-ssl-nginx*.  Do not reboot, just leave the Pi running and recheck web browser access to Luci, it should be working now.
 
-##Windows 10 steps
+## Windows 10 steps
 *(There is no accounting for taste for the OS one choses to run, but the general principles of "Linux Steps" also apply to working with Windows, though some of the details may differ.  Instruction for working with Windows will be ammended to this document soon)*
 
-#List of Packages (additional to official snapshot)
+# List of Packages (additional to official snapshot)
 This customised build is based upon the latest (at time of building) standard OpenWRT snapshot for the Raspberry Pi 4, as available from [HERE](https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/ "HERE") on the official OpenWRT webpage.  The following is not a total list of the packages additional to the snapshot but instead the packages I named in the OpenWRT image builder environment using the “PACKAGES=” flag. All dependencies (not listed here) are automatically pulled in by the image builder during the automated build process.
 
 **General Luci interface system:**
@@ -68,7 +69,7 @@ arp-scan netdiscover
 **USB storage auto mounting:**
 kmod-fs-exfat kmod-fs-ext4 kmod-fs-ntfs kmod-fuse kmod-usb-storage kmod-usb2 kmod-usb2-pci kmod-usb3 kmod-fs-autofs4 block-mount blockd
 
-#Further Tips
+# Further Tips
 Add samba user and password (luckybastard already set up as linux user in users file /etc/passwd) do....
 smbpasswd -a luckybastard
 
