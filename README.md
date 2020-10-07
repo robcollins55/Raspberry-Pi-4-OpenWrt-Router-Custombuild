@@ -46,6 +46,7 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
 10.  Luci may need to be reinstalled to access it, which I have to do after every (rare) reboot of the Pi; do the following.
     1. SSH into the Pi and do at the command prompt *opkg update; opkg --autoremove remove luci-ssl-nginx; opkg install luci-ssl-nginx*.
     2. Do not reboot, just leave the Pi running and recheck web browser access to Luci, it should be working now.
+11.  Test
 
 ## Windows 10 steps
 *(There is no accounting for taste for the OS one chooses to run, but the general principles of "Linux Steps" also apply to working with Windows, though some of the details may differ.  Instruction for working with Windows will be ammended to this document soon)*
