@@ -35,7 +35,7 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
 2. Insert the micro SD card into the card slot of the laptop or USB reader
 3. At Linux command prompt run lsblk which will show the device name of the SD.  In my case it is /dev/mmcblk0 but if yours is different make sure to change it to what you've got when doing step 4.
 4. Run dd image writer at command prompt..... dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file name here*].img of=/dev/mmcblk0 bs=4M; sync .  This will write a 3GB root partition on the SD which should be plenty for any usage case but you can up-size that to take up the whole card if you like using GParted or command line tools.
-5. Plug in your USB ethernet adapter to one of the the Pi's blue USB ports and connect you Pi 4 to your ISP's modem/gateway port.  Insert the micro SD card into the Pi 4 and power it up.
+5. Plug in your USB ethernet adapter to one of the the Pi's blue USB ports and connect your Pi 4 to your ISP's modem/gateway port.  Insert the micro SD card into the Pi 4 and power it up.
 6. On your laptop/desktop go into network setting selection gui and connect to the new wifi network *"Rivendell"*.  Enter the password *Hobbiton*. 
 7.  You should now be connected to the Pi 4.
 8.  Carry out initial internet check, do the following.
