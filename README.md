@@ -26,7 +26,7 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
  *  USB power supply
  *  4GB micro SD card (2x cards is useful as you can write an updated build to one while the other is still running in the Pi)
  *  Ethernet cable
- *  USB3 ethernet adapter.  Make sure you select one that is USB3 and has OpenWRT drivers for its chipset.  Packages preinstalled in my custom build include all available OpenWRT drivers for a range of chipsets; I use a Realtek device of rtl8152 chipset that uses the kmod-usb-net-rtl8152 driver.
+ *  USB3 ethernet adapter.  Make sure you select one that is USB3 (*not* USB2) and has OpenWRT drivers for its chipset.  Packages preinstalled in my custom build include all available OpenWRT drivers for a range of chipsets; I use a Realtek device of rtl8152 chipset that uses the kmod-usb-net-rtl8152 driver.
  *  A working laptop/desktop with wifi and SD slot (if no SD slot, use a USB sd card reader instead)
  *  micro SD to SD adapter card so that the micro can be inserted into the laptop/desktop/reader
 
