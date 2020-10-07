@@ -39,10 +39,9 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
 6. On your laptop/desktop go into network setting selection gui and connect to the new wifi network "*Rivendell*".  Enter the password *Hobbiton*. 
 7.  You should now be connected to the Pi 4.
 8.  Carry put initial internet check, do the following.
-
-    a. SSH into the router by doing *ssh root@192.168.1.1*
-    b. Set your router password , type *passwd* and hit enter, then enter the password you want to use twice.
-    c. Ensure you have internet connection on the Pi, do *ping google.com* at the command prompt which should show very low % packet loss if any if intenet is available.  If you don't get connection to google.com you should check out the connection settings for the Pi and change them to suit your ISP's modem requirements - do *nano /etc/config/network* and edit the *config interface 'wan'* and *config device 'wan_eth1_dev'*, then do *reboot* and then SSH in again and recheck the google.com ping. 
+    1. SSH into the router by doing *ssh root@192.168.1.1*
+    2. Set your router password , type *passwd* and hit enter, then enter the password you want to use twice.
+    3. Ensure you have internet connection on the Pi, do *ping google.com* at the command prompt which should show very low % packet loss if any if intenet is available.  If you don't get connection to google.com you should check out the connection settings for the Pi and change them to suit your ISP's modem requirements - do *nano /etc/config/network* and edit the *config interface 'wan'* and *config device 'wan_eth1_dev'*, then do *reboot* and then SSH in again and recheck the google.com ping. 
 9.  Fire up a web browser and in the address bar enter 192.168.1.1 and hit enter; you may have to accept security warnings of the browser to continue.  You should now have access to  the OpenWRT Luci web interface of your new Pi 4 router.  If you get a browser "cannot connect to host" or similar message follow step 10.  If you successfully accessed Luci you can skip that step.
 10.  Luci may need to be reinstalled to access it, which I have to do after every (rare) reboot of the Pi; do the following.  SSH into the Pi and do at the command prompt *opkg update; opkg --autoremove remove luci-ssl-nginx; opkg install luci-ssl-nginx*.  Do not reboot, just leave the Pi running and recheck web browser access to Luci, it should be working now.
 
