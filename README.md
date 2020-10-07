@@ -13,10 +13,10 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
 2. Enable the Pi 4 gigabit ethernet port as "Lan" on *eth0* for networking the devices on the local network.  The intention being that this port is to be connected to your home switch/wifiAP
 3. Enable "plug and play" functionality for a USB3 ethernet adapter via preinstalled drivers for a range of adapters with typical various chipsets.  The default setting for a plugged adapter has been configured as *eth1* so that one of the USB3 ports of the Pi 4 can be used to connect to the ethernet port of the ISP modem/gateway for internet "Wan" connection.
 4. Provide as preinstalled common router system enhancements including:
-    a. USB storage plug and play functionality
-    b. Router statistics module for monitoring the Pi 4 CPU temperature and other device loads.
-    c. Bash instead of Ash for terminal access to the router (Ash does not keep a history of previous commands accessed through up-arrow key whereas Bash does do that)
-    d. T
+    1. USB storage plug and play functionality
+    2. Router statistics module for monitoring the Pi 4 CPU temperature and other device loads.
+    3. Bash instead of Ash for terminal access to the router (Ash does not keep a history of previous commands accessed through up-arrow key whereas Bash does do that)
+    4. T
 
 # How-to
 ## System Minimum Requirements
