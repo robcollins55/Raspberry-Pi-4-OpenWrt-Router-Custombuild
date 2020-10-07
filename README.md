@@ -38,7 +38,7 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
 5. Plug in your USB ethernet adapter to one of the the Pi's blue USB ports and connect you Pi 4 to your ISP's modem/gateway port.  Insert the micro SD card into the Pi 4 and power it up.
 6. On your laptop/desktop go into network setting selection gui and connect to the new wifi network *"Rivendell"*.  Enter the password *Hobbiton*. 
 7.  You should now be connected to the Pi 4.
-8.  Carry put initial internet check, do the following.
+8.  Carry out initial internet check, do the following.
     1. SSH into the router by doing *ssh root@192.168.1.1*
     2. Set your router password , type *passwd* and hit enter, then enter the password you want to use twice.
     3. Ensure you have internet connection on the Pi, do *ping google.com* at the command prompt which should show very low % packet loss if any if intenet is available.  If you don't get connection to google.com you should check out the connection settings for the Pi and change them to suit your ISP's modem requirements - do *nano /etc/config/network* and edit the *config interface 'wan'* and *config device 'wan_eth1_dev'*, then do *reboot* and then SSH in again and recheck the google.com ping. 
