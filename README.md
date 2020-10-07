@@ -49,7 +49,7 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
 11.  Test
 
 ## Windows 10 steps
-The general principles of *"Linux Steps"* above also apply to working with Windows and all steps in that section can be followed except items 3 and 4 for writing the image to the micro SD.  Please download [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/ "Win32 Disk Imager") to do the image writing, and the free [Paragon Partition Manager](https://www.paragon-software.com/free/pm-express/# "Paragon Partition Manager") can be used to expand the rootfs partition to take up the whole micro SD card if that is wanted.
+The general principles of *"[Linux Steps](https://github.com/robcollins55/Raspberry-Pi-4-OpenWRT-Router-Custombuild#linux-steps "Linux Steps")"* above also apply to working with Windows and all steps in that section can be followed except items 3 and 4 for writing the image to the micro SD.  Please download [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/ "Win32 Disk Imager") to do the image writing, and the free [Paragon Partition Manager](https://www.paragon-software.com/free/pm-express/# "Paragon Partition Manager") can be used to expand the rootfs partition to take up the whole micro SD card if that is wanted.
 
 ## Mac Steps
 The *"Linux Steps"* above can be followed when working with a Mac and all steps in that section can be followed except items 3 and 4 for writing the image to the micro SD.  Please follow these following points regarding steps 3 and 4 of the process.
