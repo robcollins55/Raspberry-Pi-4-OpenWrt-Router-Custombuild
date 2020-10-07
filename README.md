@@ -47,7 +47,7 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
      1. SSH into the Pi and do at the command prompt *opkg update; opkg --autoremove remove luci-ssl-nginx; opkg install luci-ssl-nginx*.
      2. Do not reboot, just leave the Pi running and recheck web browser access to Luci, it should be working now.
 11.  Go to Luci>system>system>language&style and set the theme to OpenWrt2020 - it's much nicer than bootstrap :wink:
-12.  If using a lan switch, connect a cable ftom the gigabit port on the Pi to the first lan port of your switch/wifiAP device.  Remember to switch DHCP and NAT off on the switch (as the Pi does all that) and set the gateway to the Pi address - default is 192.168.1.1.
+12.  If using a lan switch, connect a cable ftom the gigabit port on the Pi to the first lan port of your switch/wifiAP device.  Remember to switch DHCP and NAT off on the switch (as the Pi does all that) and set the gateway address on the switch to the Pi address - default for the Pi is 192.168.1.1.
 13.  Turn the wifi on the Pi off if you intend to use your switch/wifiAP instead Network>wireless>Rivendell.  If you intend to keep the wifi on and use the Pi as the wifiAP, please do alter the country code under advanced settings to your country - by default it is set to NZ New Zealand.  Also rename the SSID and password to your preference.
 14.  Go to system>system>generalsettings>timezone and set your timezone to your location.
 15.  Method for setting up a NAS service via Samba with WireGuard remote access I will cover in Extras.md, coming soon!
