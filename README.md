@@ -46,7 +46,7 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
 10.  Luci may need to be reinstalled to access it, which I have to do after every (rare) reboot of the Pi; do the following.
      1. SSH into the Pi and do at the command prompt *opkg update; opkg --autoremove remove luci-ssl-nginx; opkg install luci-ssl-nginx*.
      2. Do not reboot, just leave the Pi running and recheck web browser access to Luci, it should be working now.
-11.  Test
+11.  Go to Luci>system>system>language&style and set the theme to OpenWrt2020 - it's much nicer than bootstrap :wink:
 
 ## Windows 10 steps
 The general principles of *"[Linux Steps](https://github.com/robcollins55/Raspberry-Pi-4-OpenWRT-Router-Custombuild#linux-steps "Linux Steps")"* above also apply to working with Windows and all steps in that section can be followed except items 3 and 4 for writing the image to the micro SD.  Please download [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/ "Win32 Disk Imager") to do the image writing, and the free [Paragon Partition Manager](https://www.paragon-software.com/free/pm-express/# "Paragon Partition Manager") can be used to expand the rootfs partition to take up the whole micro SD card if that is wanted.
