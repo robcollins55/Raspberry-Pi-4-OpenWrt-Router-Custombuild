@@ -9,7 +9,7 @@ For years I have been looking for a home router solution which is decent hardwar
 # Aims of this Customised Build
 The *"List of Packages"* section at the end of this readme come preinstalled on my custom build and aim to do the following "out of the box":
 
-1. Render the new router as immediately accessible via wifi network SSID "*Rivendell*" and password *Hobbiton* to enable easy further setting up for individual use cases.
+1. Render the new router as immediately accessible via wifi network SSID *"Rivendell"* and password *Hobbiton* to enable easy further setting up for individual use cases.
 2. Enable the Pi 4 gigabit ethernet port as "Lan" on *eth0* for networking the devices on the local network.  The intention being that this port is to be connected to your home switch/wifiAP
 3. Enable "plug and play" functionality for a USB3 ethernet adapter via preinstalled drivers for a range of adapters with typical various chipsets.  The default setting for a plugged adapter has been configured as *eth1* so that one of the USB3 ports of the Pi 4 can be used to connect to the ethernet port of the ISP modem/gateway for internet "Wan" connection.
 4. Provide as preinstalled common router system enhancements including:
