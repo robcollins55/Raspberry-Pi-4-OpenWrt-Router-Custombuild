@@ -48,7 +48,7 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
     2. Do not reboot, just leave the Pi running and recheck web browser access to Luci, it should be working now.
 
 ## Windows 10 steps
-*(There is no accounting for taste for the OS one choses to run, but the general principles of "Linux Steps" also apply to working with Windows, though some of the details may differ.  Instruction for working with Windows will be ammended to this document soon)*
+*(There is no accounting for taste for the OS one chooses to run, but the general principles of "Linux Steps" also apply to working with Windows, though some of the details may differ.  Instruction for working with Windows will be ammended to this document soon)*
 
 # List of Packages (additional to official snapshot)
 This customised build is based upon the latest (at time of building) standard OpenWRT snapshot for the Raspberry Pi 4, as available from [HERE](https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/ "HERE") on the official OpenWRT webpage.  The following is not a total list of the packages additional to the snapshot but instead the packages I named in the OpenWRT image builder environment using the “PACKAGES=” flag. All dependencies (not listed here) are automatically pulled in by the image builder during the automated build process.
