@@ -49,7 +49,12 @@ The *"List of Packages"* section at the end of this readme come preinstalled on 
 11.  Test
 
 ## Windows 10 steps
-The general principles of "Linux Steps" above also apply to working with Windows and all steps in that section can be followed except items 3 and 4 for writing the image to the micro SD.  Please download [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/ "Win32 Disk Imager") to do the image writing, and the free [Paragon Partition Manager](https://www.paragon-software.com/free/pm-express/# "Paragon Partition Manager") can be used to expand the rootfs partition to take up the whole micro SD card if that is wanted.
+The general principles of *"Linux Steps"* above also apply to working with Windows and all steps in that section can be followed except items 3 and 4 for writing the image to the micro SD.  Please download [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/ "Win32 Disk Imager") to do the image writing, and the free [Paragon Partition Manager](https://www.paragon-software.com/free/pm-express/# "Paragon Partition Manager") can be used to expand the rootfs partition to take up the whole micro SD card if that is wanted.
+
+## Mac Steps
+The *"Linux Steps"* above can be followed when working with a Mac and all steps in that section can be followed except items 3 and 4 for writing the image to the micro SD.  Please follow these steps 3 and 4 instead.
+3. At the Mac terminal command prompt the command *diskutil list* is used to list the device name of the SD.  In my case it is /dev/mmcblk0 but if yours is different make sure to change it to what you've got when doing step 4.
+4. 
 
 # List of Packages (additional to official snapshot)
 This customised build is based upon the latest (at time of building) standard OpenWRT snapshot for the Raspberry Pi 4, as available from [HERE](https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/ "HERE") on the official OpenWRT webpage.  The following is not a total list of the packages additional to the snapshot but instead the packages I named in the OpenWRT image builder environment using the “PACKAGES=” flag. All dependencies (not listed here) are automatically pulled in by the image builder during the automated build process.
