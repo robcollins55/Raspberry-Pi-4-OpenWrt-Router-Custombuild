@@ -18,7 +18,7 @@ The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-
     3. Bash instead of Ash for terminal access to the router (Ash does not keep a history of previous commands accessed through up-arrow key whereas Bash does do that)
     4. SQM (aka Smart Queue Management) can be turned on in Luci>network>SQMQoS with desired preferences. Also see OpenWrt SQM docs [HERE](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm "HERE").
     5. Network-wide ad-blocking with Adblock enabled by default Luci>Adblock.  This module blanks out the majority of web advertising in networked browsers.
-    6. [NAS](https://en.wikipedia.org/wiki/Network-attached_storage "NAS") network storage can be configured to use a USB drive plugged into the Pi USB3.  Samba sharing Luci module is enabled to achieve this Luci>services>networkshares.
+    6. [NAS](https://en.wikipedia.org/wiki/Network-attached_storage "NAS") network storage can be configured on the Pi router by plugging in a USB drive into a Pi 4 USB3 port.  Samba sharing Luci module is enabled to achieve NAS functionality Luci>services>networkshares.
     7. WireGuard and Dynamic DNS Luci modules are enabled by default so that remote access to the Pi router and connected USB drives can be achieved.
 
 # How-to
