@@ -85,7 +85,7 @@ arp-scan arp-scan-database netdiscover
 kmod-fs-exfat kmod-fs-ext4 kmod-fs-ntfs kmod-fuse kmod-usb-storage kmod-usb2 kmod-usb2-pci kmod-usb3 kmod-fs-autofs4 block-mount blockd
 
 # Further Tips
-***(Don't pay attention to the following just yet, it is an incomplete fragment work in progress)
+***(Don't pay attention to the following just yet, it is an incomplete fragment work in progress)***
 
 Add samba user and password (luckybastard already set up as linux user in users file /etc/passwd) do....
 smbpasswd -a luckybastard
