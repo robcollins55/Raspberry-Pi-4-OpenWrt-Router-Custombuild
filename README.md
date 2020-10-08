@@ -63,7 +63,7 @@ The *"[Linux Steps](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-Route
  * For step 3 at the Mac terminal command prompt the command *diskutil list* is used to list the device name of the SD.  In my case it is /dev/mmcblk0 but if yours is different make sure to change it to what you've got when doing step 4.
  * Step 4 above for dd image writing to micro SD is the same in Mac as it is in Linux.  I couldn't find any native app for resizing the ext4 rootfs partition to take up the full card if you're wanting to do that, but you can do this task by booting the excellent GParted live USB - [GParted Live USB](https://gparted.org/liveusb.php "GParted Live USB").
 
-# List of Packages (additional to official snapshot)
+# List of Packages (additional to official snapshot image .img)
 This customised build is based upon the latest (at time of building) standard OpenWrt snapshot for the Raspberry Pi 4, as available from [HERE](https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/ "HERE") on the official OpenWrt webpage.  The following is not a total list of the packages additional to the snapshot but instead the packages I named in the OpenWrt image builder environment using the “PACKAGES=” flag. All dependencies (not listed here) are automatically pulled in by the image builder during the automated build process.
 
 **General Luci interface system:**
