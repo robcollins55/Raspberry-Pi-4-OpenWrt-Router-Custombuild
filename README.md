@@ -31,7 +31,7 @@ The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-
  *  micro SD to SD adapter card so that the micro can be inserted into the laptop/desktop/reader
 
 ## Linux Steps
-1. Download the latest release RCmod custom build from my repository [HERE](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-Router-Custombuild/releases "HERE")
+1. Download the latest release RCmod custom build from my repository [HERE](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-Router-Custombuild/releases "HERE") and unzip it.
 2. Insert the micro SD card into the card slot of the laptop or USB reader
 3. At Linux command prompt run lsblk which will show the device name of the SD.  In my case it is /dev/mmcblk0 but if yours is different make sure to change it to what you've got when doing step 4.
 4. Run dd image writer at command prompt..... dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file name here*].img of=/dev/mmcblk0 bs=4M; sync .  This will write a 3GB root partition on the SD which should be plenty for any usage case but you can up-size that to take up the whole card if you like using GParted or command line tools.
