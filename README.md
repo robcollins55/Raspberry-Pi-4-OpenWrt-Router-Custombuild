@@ -7,7 +7,7 @@ For years I have been looking for a home router solution which is decent hardwar
 **Solution.**  Make a custom build from the latest snapshot!  Being the nice guy that I am I will be creating an updated custom build on a weekly basis using the official OpenWrt image builder system, which uses all the official OpenWrt software for the build.  I will aim to create a build each week and upload it here around the middle of each week.
 
 # Aims of this Customised Build
-The *"List of Packages"* section at the end of this readme come preinstalled on my custom build and aim to do the following "out of the box":
+The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-Router-Custombuild#list-of-packages-additional-to-official-snapshot "List of Packages")"* section at the end of this readme come preinstalled on my custom build and aim to do the following "out of the box":
 
 1. Render the new router as immediately accessible via wifi network SSID *"Rivendell"* and password *Hobbiton* to enable easy further setting up for individual use cases.
 2. Enable the Pi 4 gigabit ethernet port as "Lan" on *eth0* for networking the devices on the local network.  The intention being that this port is to be connected to your home switch/wifiAP
