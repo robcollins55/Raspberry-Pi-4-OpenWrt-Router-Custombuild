@@ -76,7 +76,7 @@ luci-app-wireguard wireguard-tools wireguard qrencode
 luci-app-samba4 luci-app-ddns luci-app-adblock
 
 **Network ip address discovery by manual terminal query:**
-arp-scan netdiscover
+arp-scan arp-scan-database netdiscover
 
 **USB storage auto mounting:**
 kmod-fs-exfat kmod-fs-ext4 kmod-fs-ntfs kmod-fuse kmod-usb-storage kmod-usb2 kmod-usb2-pci kmod-usb3 kmod-fs-autofs4 block-mount blockd
