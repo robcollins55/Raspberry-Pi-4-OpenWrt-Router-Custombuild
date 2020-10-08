@@ -19,7 +19,7 @@ The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-
     4. SQM (aka Smart Queue Management) can be turned on in Luci>network>SQMQoS with desired preferences. Also see OpenWrt SQM docs [HERE](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm "HERE").
     5. Network-wide ad-blocking with Adblock enabled by default Luci>Adblock.  This module blanks out the majority of web advertising in networked browsers.
     6. [NAS](https://en.wikipedia.org/wiki/Network-attached_storage "NAS") network storage can be configured to use a USB drive plugged into the Pi USB3.  Samba sharing Luci module is enabled to achieve this Luci>services>networkshares.
-    7. Remote access to the Pi router can be and 
+    7. WireGuard and Dynamic DNS Luci modules are enabled by default so that remote access to the Pi router and commected UDB drives can be achieved.
 
 # How-to
 ## System Minimum Requirements
