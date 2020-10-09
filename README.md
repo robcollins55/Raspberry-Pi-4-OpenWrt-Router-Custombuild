@@ -57,7 +57,15 @@ youruser@yourmachine:~# dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file 
     Retype password:*****
     passwd: password for root changed by root
     ```
-    3. Ensure you have internet connection on the Pi, do *ping google.com* at the command prompt which should show very low % packet loss (if any) if internet is available.  If you don't get connection to google.com you should check out the connection settings for the Pi and change them to suit your ISP's modem requirements - do *nano /etc/config/network* and edit the sections of that file *"config interface 'wan' "* and *"config device 'wan_eth1_dev' "*, then do *reboot* and then SSH in again and recheck the google.com ping. 
+    3. Ensure you have internet connection on the Pi, do *ping google.com* at the command prompt which should show very low % packet loss (if any) if internet is available.  If you don't get connection to google.com you should check out the connection settings for the Pi and change them to suit your ISP's modem requirements - do *nano /etc/config/network* and edit the sections of that file *"config interface 'wan' "* and *"config device 'wan_eth1_dev' "*, then do *reboot* and then SSH in again and recheck the google.com ping.
+    ```console
+    root@OpenWrt:~# ping google.com
+    PING google.com (216.58.199.78): 56 data bytes
+    64 bytes from 216.58.199.78: seq=0 ttl=121 time=35.549 ms
+    --- google.com ping statistics ---
+    5 packets transmitted, 5 packets received, 0% packet loss
+    round-trip min/avg/max = 35.162/35.999/38.799 ms
+    ```
 9.  Fire up a web browser and in the address bar enter 192.168.1.1 and hit enter; you may have to accept security warnings of the browser to continue.  You should now have access to  the OpenWrt Luci web interface of your new Pi 4 router.  If you get a browser "cannot connect to host" or similar message follow step 10.  If you successfully accessed Luci you can skip that step.
 10.  Luci may need to be reinstalled to access it, which I have to do after every (rare) reboot of the Pi; do the following.
      1. SSH into the Pi and do at the command prompt *opkg update; opkg --autoremove remove luci-ssl-nginx; opkg install luci-ssl-nginx*.
