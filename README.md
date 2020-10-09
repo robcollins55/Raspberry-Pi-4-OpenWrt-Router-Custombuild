@@ -62,6 +62,7 @@ youruser@yourmachine:~# dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file 
     root@OpenWrt:~# ping google.com
     PING google.com (216.58.199.78): 56 data bytes
     64 bytes from 216.58.199.78: seq=0 ttl=121 time=35.549 ms
+    *(four lines of transmit omitted for brevity)*
     --- google.com ping statistics ---
     5 packets transmitted, 5 packets received, 0% packet loss
     round-trip min/avg/max = 35.162/35.999/38.799 ms
