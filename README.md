@@ -56,7 +56,7 @@ youruser@yourmachine:~# dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file 
     New password:*****
     Retype password:*****
     passwd: password for root changed by root
-    '''
+    ```
     3. Ensure you have internet connection on the Pi, do *ping google.com* at the command prompt which should show very low % packet loss (if any) if internet is available.  If you don't get connection to google.com you should check out the connection settings for the Pi and change them to suit your ISP's modem requirements - do *nano /etc/config/network* and edit the sections of that file *"config interface 'wan' "* and *"config device 'wan_eth1_dev' "*, then do *reboot* and then SSH in again and recheck the google.com ping. 
 9.  Fire up a web browser and in the address bar enter 192.168.1.1 and hit enter; you may have to accept security warnings of the browser to continue.  You should now have access to  the OpenWrt Luci web interface of your new Pi 4 router.  If you get a browser "cannot connect to host" or similar message follow step 10.  If you successfully accessed Luci you can skip that step.
 10.  Luci may need to be reinstalled to access it, which I have to do after every (rare) reboot of the Pi; do the following.
