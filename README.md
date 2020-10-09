@@ -45,7 +45,10 @@ youruser@yourmachine:~# dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file 
 6. On your laptop/desktop go into network setting selection gui and connect to the new wifi network *"Rivendell"*.  Enter the password *Hobbiton*. 
 7.  You should now be connected to the Pi 4.
 8.  Carry out initial internet check, do the following at a Linux terminal prompt.
-    1. SSH into the router by doing *ssh root@192.168.1.1*
+    1. SSH into the router by doing:
+    ```console
+    youruser@yourmachine:~# ssh root@192.168.1.1
+    ```
     2. Set your router password , type *passwd* and hit enter, then enter the password you want to use twice.
     3. Ensure you have internet connection on the Pi, do *ping google.com* at the command prompt which should show very low % packet loss (if any) if internet is available.  If you don't get connection to google.com you should check out the connection settings for the Pi and change them to suit your ISP's modem requirements - do *nano /etc/config/network* and edit the sections of that file *"config interface 'wan' "* and *"config device 'wan_eth1_dev' "*, then do *reboot* and then SSH in again and recheck the google.com ping. 
 9.  Fire up a web browser and in the address bar enter 192.168.1.1 and hit enter; you may have to accept security warnings of the browser to continue.  You should now have access to  the OpenWrt Luci web interface of your new Pi 4 router.  If you get a browser "cannot connect to host" or similar message follow step 10.  If you successfully accessed Luci you can skip that step.
