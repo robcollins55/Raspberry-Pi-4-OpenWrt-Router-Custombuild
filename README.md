@@ -87,7 +87,7 @@ The *"[Linux Steps](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-Route
  * For step 3 at the Mac terminal command prompt the command *diskutil list* is used to list the device name of the SD.  In my case it is /dev/mmcblk0 but if yours is different make sure to change it to what you've got when doing step 4.
  * Step 4 above for dd image writing to micro SD is basically the same in Mac as it is in Linux.  Hovever, in a quirk of the Mac nix system, small case unit should be used for the "bs=" flag which in my view is a "BS" system choice LOL.  See the script below I used.  I couldn't find any native app for resizing the ext4 rootfs partition to take up the full card if you're wanting to do that, but you can do this task by booting the excellent GParted live USB - [GParted Live USB](https://gparted.org/liveusb.php "GParted Live USB").
 ```console
-iMac:[download folder] youruser$ dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file name here*].img of=/dev/mmcblk0 bs=4m; sync
+iMac:[your-download-folder] youruser$ dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file name here*].img of=/dev/mmcblk0 bs=4m; sync
 ```
 
 # List of Packages (additional to official snapshot image .img)
