@@ -29,7 +29,7 @@ The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-
  *  USB power supply
  *  4GB micro SD card (2x cards is useful as for upgrading purposes you can write an updated build to one card while the other is still running in the Pi)
  *  Ethernet cable x2 - one for lan and one for wan.
- *  USB3 ethernet adapter.  Make sure you select one that is USB3 (*not* USB2) and has OpenWrt drivers for its chipset.  Packages preinstalled in my custom build include all available OpenWrt drivers for a range of chipsets; I use a Realtek device of rtl8152 chipset that uses the kmod-usb-net-rtl8152 driver.
+ *  USB3 ethernet adapter.  Make sure you select one that is USB3 (*not* USB2) and has OpenWrt drivers available for its chipset.  Packages preinstalled in my custom build include all available OpenWrt drivers for a range of chipsets; I use a Realtek device of rtl8152 chipset that uses the kmod-usb-net-rtl8152 driver. See *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-Router-Custombuild#list-of-packages-additional-to-official-snapshot-image-img "List of Packages")"* at bottom of this readme for available OpenWrt drivers preinstalled. 
  *  A working laptop/desktop with wifi and SD slot (if no SD slot, use a USB sd card reader instead)
  *  micro SD to SD adapter card so that the micro can be inserted into the laptop/desktop/reader
 
