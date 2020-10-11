@@ -71,7 +71,7 @@ The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-
     5 packets transmitted, 5 packets received, 0% packet loss
     round-trip min/avg/max = 35.162/35.999/38.799 ms
     ```
-9.  Fire up a web browser and in the address bar enter 192.168.1.1 and hit enter; you may have to accept security warnings of the browser to continue.  You should now have access to  the OpenWrt Luci web interface of your new Pi 4 router.  If you get a browser "cannot connect to host" or similar message follow step 10.  If you successfully accessed Luci you can skip that step.
+9.  Fire up a web browser and in the address bar enter 192.168.1.1 and hit enter; you may have to accept security warnings of the browser to continue.  You should now have access to the OpenWrt Luci browser interface of your new Pi 4 router.  If you get a browser "cannot connect to host" or similar message follow step 10.  If you successfully accessed Luci you can skip that step.
 10.  Luci may need to be reinstalled to access it, which I have to do after every (rare) reboot of the Pi; do the following.
      1. SSH into the Pi and do at the command prompt
      ```console
