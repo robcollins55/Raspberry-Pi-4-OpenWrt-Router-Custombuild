@@ -15,7 +15,7 @@ The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-
 4. Provide as preinstalled common router system enhancements including:
     1. USB storage plug and play functionality.  Plug in a USB drive and see Luci>system>mountpoints to see and edit how your drive gets connected.
     2. Router statistics module for monitoring (by viewable graphs) the Pi 4 CPU temperature and other device loads.  CPU Temperature graphing needs to be enabled by Luci>statistics>setup>generalplugins>Thermal.
-    3. Bash instead of Ash for terminal access to the router (Ash does not keep a history of previous commands accessed through up-arrow key whereas Bash does do that)
+    3. Bash instead of the default OpenWrt Ash for SSH terminal access to the router (Ash does not keep a history of previous commands accessed through up-arrow key whereas Bash does do that so a no-brainer swap-out here)
     4. SQM (aka Smart Queue Management) can be turned on in Luci>network>SQMQoS with desired preferences. Also see OpenWrt SQM docs [HERE](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm "HERE").
     5. Network-wide ad-blocking with Adblock enabled by default Luci>Adblock.  This module blanks out the majority of web advertising in networked browsers.
     6. [NAS](https://en.wikipedia.org/wiki/Network-attached_storage "NAS") network storage can be configured on the Pi router by plugging in a USB drive into a Pi 4 USB3 port.  Samba sharing Luci module is enabled to achieve NAS functionality Luci>services>networkshares.
