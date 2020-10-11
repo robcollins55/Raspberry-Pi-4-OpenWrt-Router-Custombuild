@@ -97,7 +97,7 @@ This customised build is based upon the latest (at time of building) standard Op
 **General Luci interface system:**
 luci-ssl-nginx luci-theme-openwrt-2020 luci-app-statistics collectd-mod-thermal luci-app-sqm nano bash
 
-**USB-ethernet device drivers for a selection of popular chipsets (ie all drivers available on the openwrt repos):**
+**USB-ethernet adapter device drivers for a selection of popular chipsets (ie all drivers available on the openwrt repos):**
 kmod-usb-net-asix kmod-usb-net-asix-ax88179 kmod-usb-net-cdc-ether kmod-usb-net-ipheth kmod-usb-net-kaweth kmod-usb-net-mcs7830 kmod-usb-net-pegasus kmod-usb-net-rtl8150 kmod-usb-net-rtl8152 kmod-usb-net-sr9700 
 
 **WireGuard:**
