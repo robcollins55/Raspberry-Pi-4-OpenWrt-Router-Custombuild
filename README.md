@@ -59,7 +59,7 @@ youruser@yourmachine:~# dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file 
     ```
     3. Ensure you have internet connection on the Pi, do `ping google.com` at the command prompt which should show very low % packet loss (if any) if internet is available.  If you don't get connection to google.com you should check out the connection settings for the Pi and change them to suit your ISP's modem requirements - do in terminal:
     ```console
-    nano /etc/config/network
+    root@OpenWrt:~# nano /etc/config/network
     ```
     and edit the sections of that file *"config interface 'wan' "* and *"config device 'wan_eth1_dev' "*, then do *reboot* and then SSH in again and recheck the google.com ping.  
     ```console
