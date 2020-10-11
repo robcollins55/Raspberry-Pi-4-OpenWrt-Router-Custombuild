@@ -61,7 +61,8 @@ youruser@yourmachine:~# dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*complete the file 
 ```console
 nano /etc/config/network
 ```
-and edit the sections of that file *"config interface 'wan' "* and *"config device 'wan_eth1_dev' "*, then do *reboot* and then SSH in again and recheck the google.com ping.
+       and edit the sections of that file *"config interface 'wan' "* and *"config device 'wan_eth1_dev' "*, then do *reboot* and then SSH in again and recheck the google.com ping.
+       
     ```console
     root@OpenWrt:~# ping google.com
     PING google.com (216.58.199.78): 56 data bytes
