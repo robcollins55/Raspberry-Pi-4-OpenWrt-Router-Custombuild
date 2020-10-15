@@ -8,11 +8,11 @@ For years I have been looking for a home router solution which is decent hardwar
 
 # Aims of this Customised Build
 The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-Router-Custombuild#list-of-packages-additional-to-official-snapshot-image-img "List of Packages")"* section at the end of this readme come preinstalled on my custom build and aim to do the following "out of the box":
-
-1. Render the new router as immediately accessible via wifi network SSID *"Rivendell"* and password *Hobbiton* to enable easy further setting up for individual use cases.
-2. Enable the Pi 4 gigabit ethernet port as "Lan" on *eth0* for networking the devices on the local network.  The intention being that this port is to be connected to your home switch/wifiAP device.
-3. Enable "plug and play" functionality for a USB3 ethernet adapter via preinstalled drivers for a range of adapters with typical various chipsets.  The default setting for a plugged adapter has been configured as *eth1* so that one of the USB3 ports of the Pi 4 can be used to connect to the ethernet port of the ISP modem/gateway in your house to supply internet goodness to the Pi via this "Wan" connection.
-4. Provide as preinstalled common router system enhancements including:
+1. Set up by default LuCI running on nginx-ssl webserver (rather than the usual vanilla uhttpd webserver based LuCI).
+2. Render the new router as immediately accessible via wifi network SSID *"Rivendell"* and password *Hobbiton* to enable easy further setting up for individual use cases.
+3. Enable the Pi 4 gigabit ethernet port as "Lan" on *eth0* for networking the devices on the local network.  The intention being that this port is to be connected to your home switch/wifiAP device.
+4. Enable "plug and play" functionality for a USB3 ethernet adapter via preinstalled drivers for a range of adapters with typical various chipsets.  The default setting for a plugged adapter has been configured as *eth1* so that one of the USB3 ports of the Pi 4 can be used to connect to the ethernet port of the ISP modem/gateway in your house to supply internet goodness to the Pi via this "Wan" connection.
+5. Provide as preinstalled common router system enhancements including:
     1. USB storage plug and play functionality.  Plug in a USB drive and see Luci>system>mountpoints to see and edit how your drive gets connected.
     2. Router statistics module for monitoring (by viewable graphs) the Pi 4 CPU temperature and other device loads.  CPU Temperature graphing needs to be enabled by Luci>statistics>setup>generalplugins>Thermal.
     3. Bash instead of the default OpenWrt Ash for SSH terminal access to the router (Ash does not keep a history of previous commands accessed through up-arrow key whereas Bash does do that so a no-brainer swap-out here)
