@@ -99,7 +99,7 @@ iMac:[your-download-folder] youruser$ dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*comp
 This customised build is based upon the latest (at time of building) standard OpenWrt snapshot for the Raspberry Pi 4, as available from [HERE](https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/ "HERE") on the official OpenWrt webpage.  The following is not a total list of the packages additional to the snapshot but instead the packages I named in the OpenWrt image builder environment using the “PACKAGES=” flag. All dependencies (not listed here) are automatically pulled in by the image builder during the automated build process.
 
 **General Luci interface system:**
-luci-ssl-nginx luci-app-acme acme luci-theme-openwrt-2020 luci-app-statistics collectd-mod-thermal luci-app-sqm nano bash
+luci-ssl-nginx luci-app-acme acme php7-fastcgi uwsgi luci-theme-openwrt-2020 luci-app-statistics collectd-mod-thermal luci-app-sqm nano bash
 
 **USB-ethernet adapter device drivers for a selection of popular chipsets (ie all drivers available on the openwrt repos):**
 kmod-usb-net-asix kmod-usb-net-asix-ax88179 kmod-usb-net-cdc-ether kmod-usb-net-ipheth kmod-usb-net-kaweth kmod-usb-net-mcs7830 kmod-usb-net-pegasus kmod-usb-net-rtl8150 kmod-usb-net-rtl8152 kmod-usb-net-sr9700 
