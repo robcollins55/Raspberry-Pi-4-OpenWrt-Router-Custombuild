@@ -13,13 +13,13 @@ The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-
 3. Enable the Pi 4 gigabit ethernet port as "Lan" on *eth0* for networking the devices on the local network.  The intention being that this port is to be connected to your home switch/wifiAP device.
 4. Enable "plug and play" functionality for a USB3 ethernet adapter via preinstalled drivers for a range of adapters with typical various chipsets.  The default setting for a plugged adapter has been configured as *eth1* so that one of the USB3 ports of the Pi 4 can be used to connect to the ethernet port of the ISP modem/gateway in your house to supply internet goodness to the Pi via this "Wan" connection.
 5. Provide as preinstalled common router system enhancements including:
-    1. USB storage plug and play functionality.  Plug in a USB drive and see luCI>system>mountpoints to see and edit how your drive gets connected.
-    2. Router statistics module for monitoring (by viewable graphs) the Pi 4 CPU temperature and other device loads.  CPU Temperature graphing needs to be enabled by luCI>statistics>setup>generalplugins>Thermal.
+    1. USB storage plug and play functionality.  Plug in a USB drive and see LuCI>system>mountpoints to see and edit how your drive gets connected.
+    2. Router statistics module for monitoring (by viewable graphs) the Pi 4 CPU temperature and other device loads.  CPU Temperature graphing needs to be enabled by LuCI>statistics>setup>generalplugins>Thermal.
     3. Bash instead of the default OpenWrt Ash for SSH terminal access to the router (Ash does not keep a history of previous commands accessed through up-arrow key whereas Bash does do that so a no-brainer swap-out here)
-    4. SQM (aka Smart Queue Management) can be turned on in luCI>network>SQMQoS with desired preferences. Also see OpenWrt SQM docs [HERE](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm "HERE").
-    5. Network-wide ad-blocking with Adblock enabled by default luCI>Adblock.  This module blanks out the majority of web advertising in networked browsers. This is very cool - I now get virtually no annoying advertising while browsing at home!
-    6. [NAS](https://en.wikipedia.org/wiki/Network-attached_storage "NAS") network storage can be configured on the Pi router by plugging in a USB drive into a Pi 4 USB3 port.  Samba sharing luCI module is enabled to achieve NAS functionality luCI>services>networkshares.
-    7. WireGuard and Dynamic DNS luCI modules are enabled by default so that remote access to the Pi router and connected USB drives can be achieved.
+    4. SQM (aka Smart Queue Management) can be turned on in LuCI>network>SQMQoS with desired preferences. Also see OpenWrt SQM docs [HERE](https://openwrt.org/docs/guide-user/network/traffic-shaping/sqm "HERE").
+    5. Network-wide ad-blocking with Adblock enabled by default LuCI>Adblock.  This module blanks out the majority of web advertising in networked browsers. This is very cool - I now get virtually no annoying advertising while browsing at home!
+    6. [NAS](https://en.wikipedia.org/wiki/Network-attached_storage "NAS") network storage can be configured on the Pi router by plugging in a USB drive into a Pi 4 USB3 port.  Samba sharing LuCI module is enabled to achieve NAS functionality LuCI>services>networkshares.
+    7. WireGuard and Dynamic DNS LuCI modules are enabled by default so that remote access to the Pi router and connected USB drives can be achieved.
 
 # How-to
 ## System Minimum Requirements
@@ -71,14 +71,14 @@ The *"[List of Packages](https://github.com/robcollins55/Raspberry-Pi-4-OpenWrt-
     5 packets transmitted, 5 packets received, 0% packet loss
     round-trip min/avg/max = 35.162/35.999/38.799 ms
     ```
-9.  Fire up a web browser and in the address bar enter 192.168.1.1 and hit enter; you may have to accept security warnings of the browser to continue.  You should now have access to the OpenWrt luCI browser interface of your new Pi 4 router.  If you get a browser "cannot connect to host" or similar message follow step 10.  If you successfully accessed Luci you can skip that step.
-10.  luCI may need to be reinstalled to access it, which I have to do after every (rare) reboot of the Pi; do the following.
+9.  Fire up a web browser and in the address bar enter 192.168.1.1 and hit enter; you may have to accept security warnings of the browser to continue.  You should now have access to the OpenWrt LuCI browser interface of your new Pi 4 router.  If you get a browser "cannot connect to host" or similar message follow step 10.  If you successfully accessed Luci you can skip that step.
+10.  LuCI may need to be reinstalled to access it, which I have to do after every (rare) reboot of the Pi; do the following.
      1. SSH into the Pi and do at the command prompt
      ```console
      root@OpenWrt:~# opkg update; opkg --autoremove remove luci-ssl-nginx; opkg install luci-ssl-nginx
      ```
-     2. Do not reboot, just leave the Pi running and recheck web browser access to luCI, it should be working now.
-11.  Go to luCI>system>system>language&style and set the theme to OpenWrt2020 - it's much nicer than bootstrap :wink:
+     2. Do not reboot, just leave the Pi running and recheck web browser access to LuCI, it should be working now.
+11.  Go to LuCI>system>system>language&style and set the theme to OpenWrt2020 - it's much nicer than bootstrap :wink:
 12.  If using a lan switch, connect a cable from the gigabit port on the Pi to the first lan port of your switch/wifiAP device.  Remember to switch DHCP and NAT off on the switch (as the Pi does all that) and set the gateway address on the switch to the Pi address - default for the Pi is 192.168.1.1.
 13.  Turn the wifi on the Pi off if you intend to use your switch/wifiAP instead of Network>wireless>Rivendell.  If you intend to keep the wifi on and use the Pi as the wifiAP, please do alter the country code under advanced settings to your country - by default it is set to NZ New Zealand.  Also rename the SSID and password to your preference.
 14.  Go to system>system>generalsettings>timezone and set your timezone to your location.
@@ -98,7 +98,7 @@ iMac:[your-download-folder] youruser$ dd if=openwrt-bcm27xx-bcm2711-rpi-4-[*comp
 # List of Packages (additional to official snapshot image .img)
 This customised build is based upon the latest (at time of building) standard OpenWrt snapshot for the Raspberry Pi 4, as available from [HERE](https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2711/ "HERE") on the official OpenWrt webpage.  The following is not a total list of the packages additional to the snapshot but instead the packages I named in the OpenWrt image builder environment using the “PACKAGES=” flag. All dependencies (not listed here) are automatically pulled in by the image builder during the automated build process.
 
-**General luCI interface system:**
+**General LuCI interface system:**
 luci-ssl-nginx luci-app-acme acme ca-certificates php7-fastcgi uwsgi luci-theme-openwrt-2020 luci-app-statistics collectd-mod-thermal luci-app-sqm nano bash
 
 **USB-ethernet adapter device drivers for a selection of popular chipsets (ie all drivers available on the openwrt repos):**
